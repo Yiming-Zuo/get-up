@@ -48,16 +48,14 @@ def make_progress_bar(percentage, length=20):
 
 def get_wake_up_emoji(hour):
     """根据起床时间返回对应的emoji和评价"""
-    if 4 <= hour < 6:
+    if 4 <= hour < 5:
         return "🌟", "超级早起！你是晨曦中的第一缕阳光"
-    elif 6 <= hour < 8:
+    elif 5 <= hour < 6:
         return "☀️", "早起的鸟儿有虫吃"
-    elif 8 <= hour < 10:
+    elif 6 <= hour < 8:
         return "🌤️", "美好的早晨"
-    elif 10 <= hour < 12:
+    elif 8 <= hour < 9:
         return "⛅", "上午好"
-    elif 12 <= hour <= 20:
-        return "🌥️", "今天起得有点晚哦"
     else:
         return "🌙", "这个时间不算早起了"
 
@@ -284,7 +282,7 @@ def make_get_up_message(weather_message=""):
     now = pendulum.now(TIMEZONE)
 
     # 4-20点算早起
-    is_get_up_early = 4 <= now.hour <= 20
+    is_get_up_early = 4 <= now.hour <= 10
 
     # 获取时间信息
     date = now.format('YYYY-MM-DD')
