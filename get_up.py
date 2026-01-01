@@ -5,7 +5,7 @@ import pendulum
 
 from github import Github
 
-GET_UP_ISSUE_NUMBER = 1
+GET_UP_ISSUE_NUMBER = 2
 GET_UP_MESSAGE_TEMPLATE = """🌅 早安打卡 | {date}
 ━━━━━━━━━━━━━━━━━━━━━━━━
 
